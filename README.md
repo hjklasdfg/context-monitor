@@ -23,14 +23,16 @@ Real-time OpenClaw agent observability in the macOS menu bar.
 openclaw skills install context-monitor
 ```
 
-Then run the installer:
+Then set up via either method:
+
+**A1. Run the installer:**
 
 ```bash
 bash ~/.openclaw/skills/context-monitor/scripts/install.sh           # local
 bash ~/.openclaw/skills/context-monitor/scripts/install.sh --remote user@host  # remote
 ```
 
-Or ask your agent to help set it up, e.g. *"set up menu bar monitoring"*.
+**A2. Or ask your agent**, e.g. *"set up menu bar monitoring"* (any phrasing works).
 
 ### Option B: Manual install
 
@@ -109,14 +111,16 @@ Plugin file: `~/Library/Application Support/SwiftBar/Plugins/context-monitor.30s
 openclaw skills install context-monitor
 ```
 
-然后运行安装脚本：
+然后选择以下任一方式完成设置：
+
+**1-a. 运行安装脚本：**
 
 ```bash
 bash ~/.openclaw/skills/context-monitor/scripts/install.sh           # 本地模式
 bash ~/.openclaw/skills/context-monitor/scripts/install.sh --remote user@host  # 远程模式
 ```
 
-也可以直接让 agent 帮你设置，比如说"帮我设置菜单栏监控"，或者其他类似的表述。
+**1-b. 或者让 agent 帮你设置**，比如说"帮我设置菜单栏监控"（任意表述均可）。
 
 #### 方式二：手动安装
 
