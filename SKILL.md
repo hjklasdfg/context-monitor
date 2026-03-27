@@ -1,6 +1,6 @@
 ---
 name: context-monitor
-description: macOS menu bar agent observability via SwiftBar. Shows OpenClaw agent context usage, model, running state, and health in the menu bar. Includes one-command installer that auto-detects local vs remote OpenClaw setup. Use when setting up agent monitoring on macOS, installing SwiftBar status plugin, or when asked about agent dashboard/observability/monitoring on Mac. Triggers on "menu bar", "SwiftBar", "agent status", "agent monitor", "observability", "dashboard mac", "agent context", "context monitor".
+description: 「macOS」常驻菜单栏的上下文显示器 · Menu bar context monitor for OpenClaw agents. Shows context usage, model, running state via SwiftBar. Auto-detects local vs remote OpenClaw setup. Triggers on "menu bar", "SwiftBar", "agent status", "agent monitor", "observability", "dashboard mac", "agent context", "context monitor".
 ---
 
 # Context Monitor
