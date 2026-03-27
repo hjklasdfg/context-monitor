@@ -4,6 +4,8 @@ Real-time OpenClaw agent observability in the macOS menu bar.
 
 ![macOS](https://img.shields.io/badge/macOS-only-blue) ![SwiftBar](https://img.shields.io/badge/SwiftBar-v2.0+-green)
 
+[中文说明](#中文说明)
+
 ## What it shows
 
 **Menu bar**: Emoji + context length of most recently active agent (e.g. `🔧 140k`)
@@ -15,13 +17,13 @@ Real-time OpenClaw agent observability in the macOS menu bar.
 
 ## Install
 
-### Via OpenClaw skill (recommended)
+### Option A: Via OpenClaw skill (recommended)
 
 ```bash
 openclaw skills install swiftbar-agents
 ```
 
-Then either run the installer directly:
+Then run the installer:
 
 ```bash
 bash ~/.openclaw/skills/swiftbar-agents/scripts/install.sh           # local
@@ -30,27 +32,29 @@ bash ~/.openclaw/skills/swiftbar-agents/scripts/install.sh --remote user@host  #
 
 Or ask your agent to set up menu bar monitoring (any phrasing works).
 
-### Quick install (OpenClaw on this Mac)
+### Option B: Manual install
+
+**Local** (OpenClaw on this Mac):
 
 ```bash
 bash scripts/install.sh
 ```
 
-### Remote install (OpenClaw on another machine)
+**Remote** (OpenClaw on another machine):
 
 ```bash
 bash scripts/install.sh --remote user@host
 ```
 
-#### Prerequisites for remote mode
-
-- **Network**: Your Mac and the OpenClaw host must be reachable over the network. If they're not on the same LAN, use a mesh VPN like [Tailscale](https://tailscale.com), [ZeroTier](https://zerotier.com), or [WireGuard](https://wireguard.com) to connect them.
-- **SSH key auth**: Passwordless SSH must be configured (`BatchMode=yes`). If not set up yet:
-  ```bash
-  ssh-keygen -t ed25519 -N ""
-  ssh-copy-id user@host
-  ```
-- **Python 3**: Must be available on the OpenClaw host.
+> **Remote mode prerequisites**
+>
+> - **Network**: Your Mac and the OpenClaw host must be reachable. If not on the same LAN, use [Tailscale](https://tailscale.com), [ZeroTier](https://zerotier.com), or [WireGuard](https://wireguard.com).
+> - **SSH key auth**: Passwordless SSH required (`BatchMode=yes`). Setup:
+>   ```bash
+>   ssh-keygen -t ed25519 -N ""
+>   ssh-copy-id user@host
+>   ```
+> - **Python 3**: Must be available on the OpenClaw host.
 
 ## How it works
 
@@ -88,11 +92,9 @@ Shows aliases: opus, sonnet, haiku, flash, pro. User-configured `modelAliases` t
 
 ## 中文说明
 
-### 功能
-
 在 macOS 菜单栏实时显示 OpenClaw agent 状态。
 
-**菜单栏**：显示最近活跃 agent 的 emoji + 上下文长度（如 `🔧 140k`）
+**菜单栏**：最近活跃 agent 的 emoji + 上下文长度（如 `🔧 140k`）
 
 **下拉菜单**：
 - Agent 名称、上下文用量（tokens/上限 + 百分比）、模型别名、最后活跃时间
@@ -101,13 +103,13 @@ Shows aliases: opus, sonnet, haiku, flash, pro. User-configured `modelAliases` t
 
 ### 安装
 
-#### 通过 OpenClaw skill 安装（推荐）
+#### 方式一：通过 OpenClaw skill 安装（推荐）
 
 ```bash
 openclaw skills install swiftbar-agents
 ```
 
-然后直接运行安装脚本：
+然后运行安装脚本：
 
 ```bash
 bash ~/.openclaw/skills/swiftbar-agents/scripts/install.sh           # 本地模式
@@ -116,27 +118,29 @@ bash ~/.openclaw/skills/swiftbar-agents/scripts/install.sh --remote user@host  #
 
 也可以直接让 agent 帮你设置，随便怎么说都行，比如"帮我设置菜单栏监控"。
 
-#### 快速安装（OpenClaw 在本机）
+#### 方式二：手动安装
+
+**本地**（OpenClaw 在本机）：
 
 ```bash
 bash scripts/install.sh
 ```
 
-#### 远程安装（OpenClaw 在另一台机器上）
+**远程**（OpenClaw 在另一台机器上）：
 
 ```bash
 bash scripts/install.sh --remote user@host
 ```
 
-##### 远程模式前置条件
-
-- **网络**：Mac 和 OpenClaw 主机必须网络互通。如果不在同一局域网，推荐使用 [Tailscale](https://tailscale.com)、[ZeroTier](https://zerotier.com) 或 [WireGuard](https://wireguard.com) 组网。
-- **SSH 免密登录**：需要配置 SSH 密钥认证（`BatchMode=yes`）。如果还没配置：
-  ```bash
-  ssh-keygen -t ed25519 -N ""
-  ssh-copy-id user@host
-  ```
-- **Python 3**：OpenClaw 主机上需要安装 Python 3。
+> **远程模式前置条件**
+>
+> - **网络**：Mac 和 OpenClaw 主机必须网络互通。不在同一局域网的话，推荐用 [Tailscale](https://tailscale.com)、[ZeroTier](https://zerotier.com) 或 [WireGuard](https://wireguard.com) 组网。
+> - **SSH 免密登录**：需要配置密钥认证（`BatchMode=yes`）：
+>   ```bash
+>   ssh-keygen -t ed25519 -N ""
+>   ssh-copy-id user@host
+>   ```
+> - **Python 3**：OpenClaw 主机上需要安装。
 
 ### 自定义
 
