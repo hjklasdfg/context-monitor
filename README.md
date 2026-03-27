@@ -113,14 +113,14 @@ openclaw skills install context-monitor
 
 然后选择以下任一方式完成设置：
 
-**1-a. 运行安装脚本：**
+**a. 运行安装脚本：**
 
 ```bash
 bash ~/.openclaw/skills/context-monitor/scripts/install.sh           # 本地模式
 bash ~/.openclaw/skills/context-monitor/scripts/install.sh --remote user@host  # 远程模式
 ```
 
-**1-b. 或者让 agent 帮你设置**，比如说"帮我设置菜单栏监控"（任意表述均可）。
+**b. 或者让 agent 帮你设置**，比如说"帮我设置菜单栏监控"（任意表述均可）。
 
 #### 方式二：手动安装
 
