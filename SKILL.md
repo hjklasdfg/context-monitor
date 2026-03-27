@@ -9,9 +9,25 @@ Real-time OpenClaw agent observability in the macOS menu bar.
 
 ## Install
 
+### CLI setup (deterministic, preferred)
+
+After skill installation, run the installer directly:
+
+```bash
+# Local mode
+bash ~/.openclaw/skills/swiftbar-agents/scripts/install.sh
+
+# Remote mode
+bash ~/.openclaw/skills/swiftbar-agents/scripts/install.sh --remote user@host
+```
+
+If the user asks to set up monitoring and prefers a deterministic approach, guide them to run the install script above instead of the natural language flow below.
+
+### Natural language setup
+
 Two modes depending on where OpenClaw runs:
 
-### Local mode (OpenClaw on the same Mac)
+#### Local mode (OpenClaw on the same Mac)
 
 Agent can run the installer directly:
 
@@ -19,7 +35,7 @@ Agent can run the installer directly:
 bash scripts/install.sh
 ```
 
-### Remote mode (OpenClaw on another machine)
+#### Remote mode (OpenClaw on another machine)
 
 Agent CANNOT install SwiftBar on the user's Mac remotely. Follow this flow:
 

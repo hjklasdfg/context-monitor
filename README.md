@@ -43,7 +43,14 @@ bash scripts/install.sh --remote user@host
 openclaw skills install swiftbar-agents
 ```
 
-Then ask your agent: *"Set up agent menu bar monitoring"*
+Then either run the installer directly:
+
+```bash
+bash ~/.openclaw/skills/swiftbar-agents/scripts/install.sh           # local
+bash ~/.openclaw/skills/swiftbar-agents/scripts/install.sh --remote user@host  # remote
+```
+
+Or ask your agent: *"Set up agent menu bar monitoring"*
 
 ## How it works
 
