@@ -73,6 +73,16 @@ cd context-monitor
 bash scripts/install.sh
 ```
 
+## SwiftBar First Launch
+
+When SwiftBar opens for the first time, it asks you to choose a **plugin folder**. Press `Cmd+Shift+G` and paste:
+
+```
+~/Library/Application Support/SwiftBar/Plugins
+```
+
+The installer places the plugin script in this directory. You only need to do this once.
+
 ## Requirements
 
 - macOS (SwiftBar is macOS-only)
