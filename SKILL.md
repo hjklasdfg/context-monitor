@@ -41,37 +41,44 @@ Refresh
 
 ## Install
 
-### Step 1: Install the skill
+Choose the scenario that matches your setup:
+
+### Scenario A: OpenClaw runs on this Mac (local mode)
+
+Everything on one machine — OpenClaw and the menu bar monitor.
 
 ```bash
+# 1. Install the skill via OpenClaw CLI
 openclaw skills install menubar-context-monitor
+
+# 2. Run the installer
+bash ~/.openclaw/skills/context-monitor/scripts/install.sh
 ```
 
-### Step 2: Setup (choose one)
+### Scenario B: OpenClaw runs on another machine (remote mode)
 
-**Option A: CLI (recommended)**
+Most common setup — OpenClaw runs on a server / Raspberry Pi / Mac Mini, and you want the menu bar on your MacBook. **No OpenClaw installation needed on the MacBook.**
 
 ```bash
-# Local — OpenClaw runs on this Mac
-bash ~/.openclaw/skills/context-monitor/scripts/install.sh
+# 1. Clone the repo
+git clone https://github.com/hjklasdfg/openclaw-context-monitor.git
+cd openclaw-context-monitor
 
-# Remote — OpenClaw runs on another machine (SSH key auth required)
-bash ~/.openclaw/skills/context-monitor/scripts/install.sh --remote user@host
+# 2. Run the installer with your OpenClaw host's SSH address
+bash scripts/install.sh --remote user@host
 ```
 
-**Option B: Ask your agent**
+> **Example:** `bash scripts/install.sh --remote linyili@192.168.1.100`
+>
+> SSH key auth is required. If not set up yet, the installer will guide you.
+
+### Alternative: Ask your agent
+
+If you have OpenClaw running locally, you can also just tell your agent:
 
 > "Help me set up agent menu bar monitoring"
 
 The agent will read this skill and walk you through it.
-
-**Option C: From source (skip Step 1)**
-
-```bash
-git clone https://github.com/hjklasdfg/context-monitor.git
-cd context-monitor
-bash scripts/install.sh
-```
 
 ## SwiftBar First Launch
 
